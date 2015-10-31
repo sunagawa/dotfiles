@@ -1,0 +1,30 @@
+# convenience
+set -o vi
+set -o ignoreeof
+alias vi='vim'
+alias nano='vim'
+alias emacs='vim'
+alias la='ls -latrh'
+alias less='less -N'
+alias .1='cd ../'
+alias .2='cd ../../'
+alias .3='cd ../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../../'
+alias .6='cd ../../../../../../'
+
+
+# sys-admin
+alias p='ping 8.8.8.8'
+
+
+# strings & files
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+export EDITOR=vim
+
+
+# exports
+export CLICOLOR=1
+export LSCOLORS=DxGxcxdxCxegedabagacad

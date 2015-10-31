@@ -1,0 +1,10 @@
+#!/bin/bash
+
+ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
+cp -pr ~/dotfiles/vim/.vim  ~/
+
+if [[ ! -d ~/.vim/bundle/repos/github.com/Shougo/dein.vim ]]; then
+  curl -sL https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh  | bash -s ~/.vim/bundle/
+fi
+
+

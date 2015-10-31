@@ -1,0 +1,1 @@
+set clipboard=unnamed   " using system clipboard on using vim (after brew update && brew install vim)

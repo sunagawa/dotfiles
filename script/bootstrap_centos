@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# update -> install the basic applications -> clean
+yum update -y && \ 
+yum install -y \
+  git \
+  wget \
+  vim \
+  hostname \
+  tar \
+  zip \
+  unzip \
+  gcc \
+  gcc-devel \
+  chrony && \
+  yum clean all
+
+
+# start the ntp client
+systemctl start  chronyd.service
+systemctl enable chronyd.service
+
+
+# set to the JST timezone (both software and hardware clock)
+cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+echo ‘ZONE="Asia/Tokyo"’ >> /etc/sysconfig/clock
+echo ‘UTC=False’ >> /etc/sysconfig/clock
+
+
+# restart crond (due to the timezone change)
+systemctl restart crond

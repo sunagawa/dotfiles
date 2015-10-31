@@ -1,0 +1,38 @@
+"### [Tab]
+
+noremap <C-t>  <Nop>
+
+" Move new tabpage at the last.
+nnoremap <silent> <C-t>n  :<C-u>tabnew \| :tabmove<CR>
+nnoremap <silent> <C-t>c  :<C-u>tabclose<CR>
+nnoremap <silent> <C-t>o  :<C-u>tabonly<CR>
+nnoremap <silent> <C-t>i  :<C-u>tabs<CR>
+
+nmap <C-t><C-n>  <C-t>n
+nmap <C-t><C-c>  <C-t>c
+nmap <C-t><C-o>  <C-t>o
+nmap <C-t><C-i>  <C-t>i
+
+nnoremap <silent> <C-t><Space>  :<C-u>TabpageTitle<CR>
+
+nmap <silent> <C-t><C-@>  <C-t><Space>
+nmap <silent> <C-t><C-Space>  <C-t><Space>
+
+
+" Moving around tabpages. 
+
+nnoremap <silent> <C-t>k
+\ :<C-u>execute 'tabnext' 1 + (tabpagenr() + v:count1 - 1) % tabpagenr('$')<CR>
+nnoremap <silent> <C-t>j
+\ :<C-u>execute 'tabprevious' v:count1 % tabpagenr('$')<CR>
+nnoremap <silent> <C-t>J  :<C-u>tabfirst<CR>
+nnoremap <silent> <C-t>K  :<C-u>tablast<CR>
+
+nmap <C-t><C-j>  <C-t>k
+nmap <C-t><C-k>  <C-t>j
+nmap <C-t><C-t>  <C-t>
+
+nmap <C-t>h  <C-t>j
+nmap <C-t>l  <C-t>k
+nmap <C-t><C-h>  <C-t>j
+nmap <C-t><C-l>  <C-t>k

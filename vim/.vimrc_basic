@@ -1,0 +1,33 @@
+"### [Fundamentals]
+""--- Colors
+colorscheme molokai
+syntax enable
+
+"--- Spaces And Tabs
+"set tabstop=2           " number of visual spaces per TAB
+"set softtabstop=2       " number of spaces in tab when editing
+"set expandtab           " tabs are spaces
+"set autoindent
+"
+""--- UI Config
+set number              " show line numbers
+set showcmd             " show command in bottom bar
+set cursorline          " highlight current line
+set wildmenu            " visual autocomplete for command menu
+set lazyredraw          " redraw only when we need to.
+set showmatch           " highlight matching [{()}]
+set pastetoggle=<C-E>   " avoid auto-indenting upon pasting
+
+autocmd FileType * set tabstop=2 | set shiftwidth=2 | set expandtab
+
+"--- Searching
+"set incsearch           " search as characters are entered
+"set hlsearch            " highlight matches
+"nnoremap nhl :nohlsearch<CR>
+"
+""--- Backups
+set backup
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
+
+

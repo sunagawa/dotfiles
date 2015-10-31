@@ -1,0 +1,56 @@
+"### [Leader (space)]
+"a -> python-mode (auto-complete)
+"b -> python-mode (manage breakpoint)
+"c -> 
+"d -> 
+"e -> 
+"f -> 
+"g -> 
+"h -> window switch
+"i -> 
+"j -> window switch
+"k -> window switch
+"l -> window switch
+"m -> 
+"n -> 
+"o -> 
+"p -> 
+"q -> 
+"r -> python-mode (run python)
+"s -> window size
+"t -> 
+"u -> 
+"v -> apply the current configuration of .vimrc
+"w -> save current file (and execute the source)
+"x -> 
+"y -> 
+"z -> 
+let mapleader=' '
+
+"### [Leader > hjkl]
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>h <C-w>h
+nnoremap <leader>l <C-w>l
+
+"### [Leader > s]
+noremap <leader>sh :  5winc + <CR>
+noremap <leader>sl :  5winc - <CR>
+noremap <leader>sw : 10winc > <CR>
+noremap <leader>sn : 10winc < <CR>
+
+"### [Leader > v]
+nmap     <leader>v  : w!  <CR> : :so $MYVIMRC<CR>
+
+"### [Leader > w]
+noremap <leader>w   : w!  <CR>
+noremap <leader>ww  : w!  <CR>
+noremap <leader>wq  : wq! <CR>
+noremap <leader>wb  : w!  <CR> : !bash % <CR>
+noremap <leader>wc  : w!  <CR> : !gcc -o gcc_testing % && ./gcc_testing <CR>
+noremap <leader>wbd : w!  <CR> : !bash -x % <CR>
+noremap <leader>wg  : w!  <CR> : !groovy % <CR>
+noremap <leader>wj  : w!  <CR> : !jasmine-node . --coffee <CR>
+noremap <leader>wn  : w!  <CR> : !coffee % --nodejs <CR>
+noremap <leader>wp  : w!  <CR> : !python % <CR>
+noremap <leader>ws  : w!  <CR> : !scala % <CR>

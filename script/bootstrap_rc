@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ln -sf ~/dotfiles/rc/.bashrc ~/.bashrc
+ln -sf ~/dotfiles/rc/.zshrc  ~/.zshrc
